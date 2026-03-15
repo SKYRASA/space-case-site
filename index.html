@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>🚀 Space Case Battle</title>
+<title>Space Case Battle</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -12,32 +12,50 @@
 
 <body>
 
-<h1 class="logo">🚀 SPACE CASE BATTLE</h1>
+<div class="topbar">
 
-<div class="cases">
+<div class="logo">🚀 SPACE CASE</div>
 
-<div class="case" onclick="openCase()">
+<div class="balance">
+💰 Balance: <span id="balance">100</span>
+</div>
 
-<img src="img/space1.png">
-
-<p>GALAXY CASE</p>
+<a href="inventory.html">🎒 Inventory</a>
 
 </div>
 
+<h1 class="title">Choose Case</h1>
+
+<div class="case-grid">
+
+<a href="case.html?case=neptune" class="case">
+<img src="https://i.imgur.com/YhK9G8A.png">
+<p>Neptune Case</p>
+</a>
+
+<a href="case.html?case=moon" class="case">
+<img src="https://i.imgur.com/tR0Y5yA.png">
+<p>Moon Case</p>
+</a>
+
+<a href="case.html?case=mars" class="case">
+<img src="https://i.imgur.com/q6F3K6T.png">
+<p>Mars Case</p>
+</a>
+
+<a href="case.html?case=saturn" class="case">
+<img src="https://i.imgur.com/k0P5kRr.png">
+<p>Saturn Case</p>
+</a>
+
+<a href="case.html?case=galaxy" class="case">
+<img src="https://i.imgur.com/Xg0K9Yx.png">
+<p>Galaxy Case</p>
+</a>
+
 </div>
-
-<div class="roulette">
-
-<div id="items"></div>
-
-<div class="pointer"></div>
-
-</div>
-
-<h2 id="result"></h2>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
