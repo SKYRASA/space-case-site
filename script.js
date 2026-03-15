@@ -1,45 +1,26 @@
-let skins = [
+let skins=[
 
-{
-name:"Space Pistol",
-img:"https://i.imgur.com/9QO4F9V.png",
-rarity:"common",
-chance:50
-},
+{name:"Space Pistol",img:"img/space1.png",rarity:"common",chance:50},
 
-{
-name:"Galaxy Rifle",
-img:"https://i.imgur.com/XzQZ6QG.png",
-rarity:"rare",
-chance:30
-},
+{name:"Galaxy Rifle",img:"img/space2.png",rarity:"rare",chance:30},
 
-{
-name:"Nebula Sniper",
-img:"https://i.imgur.com/v9y6F6T.png",
-rarity:"epic",
-chance:15
-},
+{name:"Nebula Sniper",img:"img/space3.png",rarity:"epic",chance:15},
 
-{
-name:"Cosmic Dragon",
-img:"https://i.imgur.com/VuK6C6H.png",
-rarity:"legendary",
-chance:5
-}
+{name:"Cosmic Dragon",img:"img/space4.png",rarity:"legendary",chance:5}
 
 ]
 
-function getRandomSkin(){
+function getSkin(){
 
-let rand = Math.random()*100
-let sum = 0
+let rand=Math.random()*100
+
+let sum=0
 
 for(let skin of skins){
 
-sum += skin.chance
+sum+=skin.chance
 
-if(rand <= sum){
+if(rand<=sum){
 
 return skin
 
@@ -51,15 +32,19 @@ return skin
 
 function openCase(){
 
-let itemsDiv = document.getElementById("items")
+let items=document.getElementById("items")
 
-itemsDiv.innerHTML=""
+items.innerHTML=""
+
+items.style.transition="none"
+
+items.style.transform="translateX(0px)"
 
 let roll=[]
 
-for(let i=0;i<80;i++)
+for(let i=0;i<100;i++){
 
-let skin=getRandomSkin()
+let skin=getSkin()
 
 roll.push(skin)
 
@@ -67,22 +52,26 @@ let div=document.createElement("div")
 
 div.className="item "+skin.rarity
 
-div.innerHTML=
-"<img src='"+skin.img+"'><p>"+skin.name+"</p>"
+div.innerHTML="<img src='"+skin.img+"'><p>"+skin.name+"</p>"
 
-itemsDiv.appendChild(div)
+items.appendChild(div)
 
 }
 
-let win=roll[35]
+setTimeout(()=>{
+
+items.style.transition="5s cubic-bezier(.1,.7,.1,1)"
+
+items.style.transform="translateX(-7000px)"
+
+},100)
+
+let win=roll[50]
 
 setTimeout(()=>{
 
-document.getElementById("result").innerHTML=
-"🎉 YOU GOT: "+win.name
+document.getElementById("result").innerHTML="🎉 YOU GOT: "+win.name
 
 },5000)
-
-itemsDiv.style.transform="translateX(-4100px)"
 
 }
