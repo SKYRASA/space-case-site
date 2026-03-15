@@ -83,6 +83,6 @@ document.getElementById("result").innerHTML=
 
 },5000)
 
-itemsDiv.style.transform="translateX(-4900px)"
+itemsDiv.style.transform="translateX(-4100px)"
 
 }
