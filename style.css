@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>🚀 Space Case Opening</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>🚀 SPACE CASE BATTLE</h1>
+
+<button onclick="openCase()">OPEN CASE</button>
+
+<div class="roulette">
+<div id="items"></div>
+</div>
+
+<h2 id="result"></h2>
+
+<script src="script.js"></script>
+
+</body>
+</html>
