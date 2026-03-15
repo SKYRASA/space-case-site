@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
+<meta charset="UTF-8">
 <title>🚀 Space Case Battle</title>
 
 <link rel="stylesheet" href="style.css">
@@ -10,12 +12,21 @@
 
 <body>
 
-<h1>🚀 SPACE CASE BATTLE</h1>
+<h1 class="title">🚀 SPACE CASE BATTLE</h1>
 
-<button onclick="openCase()">OPEN CASE</button>
+<div class="cases">
+
+<div class="case" onclick="openCase()">
+<img src="https://i.imgur.com/2DhmtJ4.png">
+<p>Galaxy Case</p>
+</div>
+
+</div>
 
 <div class="roulette">
+
 <div id="items"></div>
+
 </div>
 
 <h2 id="result"></h2>
@@ -23,4 +34,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
